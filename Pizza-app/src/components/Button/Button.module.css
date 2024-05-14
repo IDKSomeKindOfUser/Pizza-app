@@ -1,0 +1,28 @@
+.button {
+    border-radius: 29px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: none;
+    color: var(--color-white    );
+}
+.small{
+    padding: 10px 25px;
+}
+
+.big{
+    font-size: 15px;
+    padding: 20px 60px;
+    text-transform: uppercase;
+}
+.accent {
+    background-color: var(--color-primary);
+}
+.accent:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.button:focus,
+.button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
