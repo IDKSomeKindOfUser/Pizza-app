@@ -1,0 +1,61 @@
+.layout{
+    display: flex;
+    min-height: 100vh;
+}
+
+/*Sidebar*/
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-right: 1px solid var(--color-separator);
+}
+
+.user{
+    margin-bottom: 45px;
+}
+.name{
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+.email{
+    font-size: 14px;
+    color: #9EA1B1;
+}
+.avatar{
+    max-width: 100px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+}
+.link{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: var(--color-text);
+}
+.link:hover,
+.active{
+    color: var(--color-primary-hover);
+}
+.exit-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+
+/*Content*/
+
+.content{
+    padding: 40px 60px;
+    width: 100%;
+}
