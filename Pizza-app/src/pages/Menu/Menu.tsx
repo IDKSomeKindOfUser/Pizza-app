@@ -12,15 +12,12 @@ export function Menu(){
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | undefined>();
 
+
+
     const getMenu = async () => {
         // using library axios
         try{
             setIsLoading(true);
-            await new Promise<void>((resolve) => {
-                setTimeout(() => {
-                    resolve();
-                }, 3000)
-            });
             const { data } = await axios.get<ProductType[]>(`${prefix}/products`);
             setProducts(data);
             setIsLoading(false);
@@ -60,3 +57,5 @@ export function Menu(){
         </div>
     </>
 }
+
+export default Menu;

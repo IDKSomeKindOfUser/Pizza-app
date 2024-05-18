@@ -1,16 +1,19 @@
-import React from 'react'
+import React, {lazy, Suspense} from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {DevSupport} from "@react-buddy/ide-toolbox";
 import {ComponentPreviews, useInitial} from "./dev";
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
-import {Menu} from "./pages/Menu/Menu.tsx";
+import {createBrowserRouter, defer, RouterProvider} from "react-router-dom"
 import {Cart} from "./pages/Cart/Cart.tsx";
 import {Error} from "./pages/Error/Error.tsx";
 import {Layout} from "./layout/Layout-Menu/Layout-Menu.tsx";
 import {Product} from "./pages/Product/Product.tsx";
 import axios from "axios";
 import { prefix } from './helpers/API.ts';
+
+
+// eslint-disable-next-line react-refresh/only-export-components
+const Menu = lazy(() => import('./pages/Menu/Menu'))
 
 
 const router = createBrowserRouter([
@@ -20,7 +23,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Menu />,
+                element: <Suspense fallback={<>Loading...</>}><Menu /></Suspense>,
             },
             {
                 path: '/cart',
@@ -33,9 +36,15 @@ const router = createBrowserRouter([
             {
                 path: '/product/:id',
                 element: <Product />,
+                errorElement: <>Some kind of error :(</>,
                 loader: async ({ params }) => {
-                    const { data } = await axios.get(`${prefix}/products/${params.id}`);
-                    return data;
+                    return defer({
+                        data: new Promise((resolve, reject) => {
+                            setTimeout(() => {
+                                axios.get(`${prefix}/products/${params.id}`).then(data => resolve(data)).catch(e => reject(e))
+                            }, 2000)
+                        })
+                    })
                 }
             }
         ]
