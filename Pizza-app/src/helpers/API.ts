@@ -1,0 +1,1 @@
+export const prefix = 'https://purpleschool.ru/pizza-api-demo';

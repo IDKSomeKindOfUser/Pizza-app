@@ -8,6 +8,9 @@ import {Menu} from "./pages/Menu/Menu.tsx";
 import {Cart} from "./pages/Cart/Cart.tsx";
 import {Error} from "./pages/Error/Error.tsx";
 import {Layout} from "./layout/Layout-Menu/Layout-Menu.tsx";
+import {Product} from "./pages/Product/Product.tsx";
+import axios from "axios";
+import { prefix } from './helpers/API.ts';
 
 
 const router = createBrowserRouter([
@@ -26,6 +29,14 @@ const router = createBrowserRouter([
             {
                 path: '*',
                 element: <Error />,
+            },
+            {
+                path: '/product/:id',
+                element: <Product />,
+                loader: async ({ params }) => {
+                    const { data } = await axios.get(`${prefix}/products/${params.id}`);
+                    return data;
+                }
             }
         ]
     },
