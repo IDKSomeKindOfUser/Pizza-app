@@ -10,6 +10,9 @@ import {Layout} from "./layout/Layout-Menu/Layout-Menu.tsx";
 import {Product} from "./pages/Product/Product.tsx";
 import axios from "axios";
 import { prefix } from './helpers/API.ts';
+import {AuthLayout} from "./layout/Auth/AuthLayout.tsx";
+import {Login} from "./pages/Login/Login.tsx";
+import {Register} from "./pages/Register/Register.tsx";
 
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -30,10 +33,6 @@ const router = createBrowserRouter([
                 element: <Cart />,
             },
             {
-                path: '*',
-                element: <Error />,
-            },
-            {
                 path: '/product/:id',
                 element: <Product />,
                 errorElement: <>Some kind of error :(</>,
@@ -49,14 +48,24 @@ const router = createBrowserRouter([
             }
         ]
     },
-    // {
-    //     path: '/cart',
-    //     element: <Cart />,
-    // },
-    // {
-    //     path: '*',
-    //     element: <Error />,
-    // },
+    {
+        path: '/auth',
+        element: <AuthLayout />,
+        children: [
+            {
+                path: 'login',
+                element: <Login/>,
+            },
+            {
+                path: 'register',
+                element: <Register/>,
+            },
+        ]
+    },
+    {
+        path: '*',
+        element: <Error />,
+    },
 
 ])
 

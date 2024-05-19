@@ -1,0 +1,41 @@
+.login-wrapper{
+    width: 100%;
+    max-width: 500px;
+}
+
+.login-wrapper,
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.field,
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.field:last-of-type{
+    margin-bottom: 70px;
+}
+.description{
+    font-size: 17px;
+    color: var(--color-separator);
+}
+.button{
+    align-self: center;
+}
+
+.footer{
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+.footer a {
+    color: var(--color-primary);
+}
+.footer a:hover{
+    color: var(--color-primary-hover);
+}

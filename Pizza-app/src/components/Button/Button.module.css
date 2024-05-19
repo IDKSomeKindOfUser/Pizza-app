@@ -4,7 +4,7 @@
     cursor: pointer;
     transition: background 0.2s;
     border: none;
-    color: var(--color-white    );
+    color: var(--color-white);
 }
 .small{
     padding: 10px 25px;
@@ -14,6 +14,7 @@
     font-size: 15px;
     padding: 20px 60px;
     text-transform: uppercase;
+    box-shadow: 0 10px 40px 0 rgba(122, 129, 190, 0.16);
 }
 .accent {
     background-color: var(--color-primary);
