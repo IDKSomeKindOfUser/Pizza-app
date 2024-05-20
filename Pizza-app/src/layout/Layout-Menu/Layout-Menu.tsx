@@ -1,9 +1,15 @@
-import {NavLink, Outlet} from "react-router-dom";
+import {NavLink, Outlet, useNavigate} from "react-router-dom";
 import styles from "./Layout-Menu.module.css";
 import Button from "../../components/Button/Button.tsx";
 import cn from 'classnames';
 
 export function Layout(){
+    const navigate = useNavigate();
+    const logout = () => {
+        localStorage.removeItem('jwt');
+        navigate('/auth/login');
+    }
+
     return <div className={styles['layout']}>
         <div className={styles['sidebar']}>
             <div className={styles['user']}>
@@ -25,7 +31,7 @@ export function Layout(){
                     Cart
                 </NavLink>
             </div>
-            <Button className={styles['exit-button']}>
+            <Button className={styles['exit-button']} onClick={logout}>
                 <i className="fal fa-times-circle"></i>
                 Exit
             </Button>
