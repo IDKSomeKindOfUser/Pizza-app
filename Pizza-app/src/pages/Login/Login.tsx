@@ -3,13 +3,10 @@ import {Title} from "../../components/Title/Title.tsx";
 import Input from "../../components/Input/Input.tsx";
 import Button from "../../components/Button/Button.tsx";
 import {Link, useNavigate} from "react-router-dom";
-import {FormEvent, useState} from "react";
-import axios, {AxiosError} from "axios";
-import { prefix } from '../../helpers/API.ts'
-import {AuthResponse} from "../../interfaces/auth.interface.ts";
-import {AppDispatch} from "../../store/store.ts";
-import {userActions} from "../../store/user.slice.ts";
-import {useDispatch} from "react-redux";
+import {FormEvent, useEffect} from "react";
+import {AppDispatch, RootState} from "../../store/store.ts";
+import {login, userActions} from "../../store/user.slice.ts";
+import {useDispatch, useSelector} from "react-redux";
 
 export type LoginForm = {
     email:{
@@ -22,36 +19,31 @@ export type LoginForm = {
 
 
 export function Login(){
-    const [error, setError] = useState<string | null>()
     const navigate = useNavigate();
     const dispatch = useDispatch<AppDispatch>()
+    const {jwt, loginErrorMessage} = useSelector((s: RootState) => s.user);
+
+    useEffect(() => {
+        if(jwt){
+            navigate('/')
+        }
+    }, [jwt, navigate]);
 
     const submit = async (e: FormEvent) => {
         e.preventDefault();
+        dispatch(userActions.clearLoginError());
         const target = e.target as typeof e.target & LoginForm;
         const { email, password } = target;
         await sendLogin(email.value, password.value)
     }
 
     const sendLogin = async (email: string, password: string) =>{
-        try {
-            const { data } = await axios.post<AuthResponse>(`${prefix}/auth/login`, {
-                email,
-                password,
-            })
-            dispatch(userActions.addJwt(data.access_token))
-            navigate('/')
-        }catch(e){
-            if(e instanceof AxiosError){
-                console.log(e);
-                setError(e.response?.data.message);
-            }
-        }
+        dispatch(login({email, password}))
     }
 
     return <div className={styles['login-wrapper']} >
         <Title className={styles['title']}>Вход</Title>
-        {error && <div className={styles['error']}>{error}</div>}
+        {loginErrorMessage && <div className={styles['error']}>{loginErrorMessage}</div>}
         <form className={styles['form']} onSubmit={submit}>
             <div className={styles['field']}>
                 <label htmlFor={'email'} className={styles['description']}>Your email</label>
