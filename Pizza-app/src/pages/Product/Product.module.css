@@ -1,0 +1,51 @@
+.header,
+.card{
+    display: flex;
+    gap: 50px;
+}
+
+.image{
+    border-radius: 20px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+}
+
+.description,
+.hr{
+    max-width: 250px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hr,
+.currency{
+    color: var(--color-separator);
+}
+
+.rating{
+    padding: 3px 8px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 6px 24px 0 rgba(154, 114, 76, 0.20);
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+.add-to-cart-button{
+    margin-left: auto;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    width: 35px;
+    aspect-ratio: 1;
+}
+.add-to-cart-button:hover {
+    background-color: var(--color-primary-hover);
+}
