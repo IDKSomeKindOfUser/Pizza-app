@@ -1,0 +1,34 @@
+.price-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0;
+}
+
+.price-container,
+.hr,
+.checkout{
+    max-width: 500px;
+}
+
+.hr,
+.total-count,
+.price-container span{
+    color: var(--color-separator);
+    font-weight: 300;
+}
+
+.text,
+.price{
+    font-weight: 500;
+}
+
+.price{
+    font-size: 19px;
+}
+
+.checkout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}

@@ -42,7 +42,7 @@ export function Login(){
     }
 
     return <div className={styles['login-wrapper']} >
-        <Title className={styles['title']}>Вход</Title>
+        <Title className={styles['title']}>Enter</Title>
         {loginErrorMessage && <div className={styles['error']}>{loginErrorMessage}</div>}
         <form className={styles['form']} onSubmit={submit}>
             <div className={styles['field']}>
@@ -56,7 +56,7 @@ export function Login(){
             <Button className={styles['button']} appearance={'big'}>Enter</Button>
         </form>
         <div className={styles['footer']}>
-            <p>Don't have an account?</p>
+            <p>Don't have an account yet?</p>
             <Link to={'/auth/register'}>Register</Link>
         </div>
     </div>

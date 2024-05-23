@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9fd69e8-6556-4c84-aed5-638ac676a33a" name="Changes" comment="" />
+    <list default="true" id="b9fd69e8-6556-4c84-aed5-638ac676a33a" name="Changes" comment="end">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/components/ProductCard/ProductCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/components/ProductCard/ProductCard.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/components/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/components/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/components/cartItem/cartItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/components/cartItem/cartItem.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/components/cartItem/cartItem.props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/components/cartItem/cartItem.props.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/components/cartItem/cartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/components/cartItem/cartItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/layout/Layout-Menu/Layout-Menu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/layout/Layout-Menu/Layout-Menu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/layout/Layout-Menu/Layout-Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/layout/Layout-Menu/Layout-Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/pages/Cart/Cart.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/pages/Cart/Cart.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/pages/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/pages/Cart/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/pages/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/pages/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/pages/Menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/pages/Menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/pages/Product/Product.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/pages/Product/Product.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/pages/Product/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/pages/Register/Register.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/pages/Register/Register.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/pages/Register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/pages/Register/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/pages/Success/Success.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/pages/Success/Success.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/pages/Success/Success.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/pages/Success/Success.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/store/cart.slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/store/cart.slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/store/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/src/store/user.slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/src/store/user.slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza-app/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza-app/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +49,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -34,24 +63,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "D:/For programming/Практика/Практика по React/Pizza-app/Pizza-app",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/akuma/Documents/For programming/Практика/Практика по React/pizza-app/Pizza-app/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/For programming/Практика/Практика по React/Pizza-app/Pizza-app&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\For programming\\Практика\\Практика по React\\Pizza-app\\Pizza-app\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -66,6 +95,7 @@
       <recent name="$PROJECT_DIR$/Pizza-app/src/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\For programming\Практика\Практика по React\Pizza-app\Pizza-app\public" />
       <recent name="$PROJECT_DIR$/Pizza-app/src/components" />
       <recent name="$PROJECT_DIR$/Pizza-app/src/pages" />
     </key>
@@ -80,7 +110,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ad9a8e51-02be-43c5-98e9-2ba8976adcd3" name="Changes" comment="" />
+      <changelist id="b9fd69e8-6556-4c84-aed5-638ac676a33a" name="Changes" comment="added cherry pick" />
       <created>1715792149001</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -91,6 +121,7 @@
       <workItem from="1715870525818" duration="8981000" />
       <workItem from="1715968717350" duration="359000" />
       <workItem from="1715976611611" duration="99000" />
+      <workItem from="1716367845686" duration="22596000" />
     </task>
     <task id="LOCAL-00001" summary="added 3 routed pages">
       <option name="closed" value="true" />
@@ -108,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715968984037</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added cherry pick">
+      <option name="closed" value="true" />
+      <created>1716235736843</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716235736843</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +172,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added 3 routed pages" />
+    <MESSAGE value="added auth layout" />
     <MESSAGE value="added search-bar, card" />
-    <option name="LAST_COMMIT_MESSAGE" value="added search-bar, card" />
+    <MESSAGE value="added cherry pick" />
+    <MESSAGE value="end" />
+    <option name="LAST_COMMIT_MESSAGE" value="end" />
   </component>
 </project>

@@ -3,10 +3,23 @@ import {ProductCardProps} from "./ProductCard.props.ts";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faShoppingBag, faStar} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {AppDispatch} from "../../store/store.ts";
+import {cartActions} from "../../store/cart.slice.ts";
+import React from "react";
 
 
 
 function ProductCard(props: ProductCardProps){
+
+    const dispatch = useDispatch<AppDispatch>();
+
+    const add = (e: React.MouseEvent<HTMLButtonElement>)=> {
+        e.preventDefault();
+        dispatch(cartActions.add(props.id));
+    }
+
+
     return(
         <Link to={`/product/${props.id}`}>
             <div className={styles['card']}>
@@ -15,7 +28,7 @@ function ProductCard(props: ProductCardProps){
                         {props.price}&nbsp;
                         <span className={styles['currency']}>₽</span>
                     </div>
-                    <button className={styles['add-to-cart-button']}>
+                    <button className={styles['add-to-cart-button']} style={{border: 'none'}} onClick={add}>
                         <FontAwesomeIcon icon={faShoppingBag} style={{color: "#FFFFFF",}}/>
                     </button>
                     <div className={styles['rating']}>

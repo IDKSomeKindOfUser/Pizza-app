@@ -1,33 +1,50 @@
+.card-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
 .header,
 .card{
+    max-width:700px;
     display: flex;
-    gap: 50px;
+    align-items: center;
+    gap: 100px;
+}
+.arrow{
+    background-color: var(--color-primary);
+    border-radius: 20px;
+    color: var(--color-white);
+    padding: 10px 25px;
+    transition-duration: 0.2s;
+}
+.arrow:hover {
+    background-color: var(--color-primary-hover);
 }
 
-.image{
-    border-radius: 20px;
-}
 
 .description{
     display: flex;
     flex-direction: column;
+    gap: 25px;
 }
 
-.description,
-.hr{
-    max-width: 250px;
-}
 
 .wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 50px;
 }
-
+.image{
+    border-radius: 20px;
+}
 
 .hr,
 .currency{
     color: var(--color-separator);
+}
+.composition-wrapper{
+    color: var(--color-text-secondary);
 }
 
 .rating{
@@ -36,16 +53,21 @@
     border-radius: 20px;
     box-shadow: 0 6px 24px 0 rgba(154, 114, 76, 0.20);
     color: var(--color-text);
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .add-to-cart-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin-left: auto;
-    border-radius: 50%;
-    background-color: var(--color-primary);
-    width: 35px;
-    aspect-ratio: 1;
 }
-.add-to-cart-button:hover {
-    background-color: var(--color-primary-hover);
+
+.ingredient-text{
+    font-size: 15px;
+}
+
+.ingredient-text:first-letter{
+    text-transform: uppercase;
 }

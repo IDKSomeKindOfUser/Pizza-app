@@ -1,8 +1,16 @@
 .card{
     background-color: var(--color-white);
+    border: 1px dashed transparent;
     border-radius: 20px;
     box-shadow: 18px 18px 36px 0 rgba(211, 209, 216, 0.25);
     width: 320px;
+    filter: grayscale(1); /* Черно-белый фильтр для изображения */
+    transition: 1s;
+}
+
+.card:hover{
+    border: 1px dashed var(--color-primary);
+    filter: grayscale(0);
 }
 .header{
     position: relative;

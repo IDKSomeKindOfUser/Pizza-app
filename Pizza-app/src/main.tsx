@@ -16,6 +16,7 @@ import {Register} from "./pages/Register/Register.tsx";
 import {RequireAuth} from "./helpers/RequireAuth.tsx";
 import {Provider} from "react-redux";
 import {store} from "./store/store.ts";
+import {Success} from "./pages/Success/Success.tsx";
 
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
                 element: <Cart />,
             },
             {
+              path: '/success',
+              element: <Success />
+            },
+            {
                 path: '/product/:id',
                 element: <Product />,
                 errorElement: <>Some kind of error :(</>,
@@ -44,7 +49,7 @@ const router = createBrowserRouter([
                         data: new Promise((resolve, reject) => {
                             setTimeout(() => {
                                 axios.get(`${prefix}/products/${params.id}`).then(data => resolve(data)).catch(e => reject(e))
-                            }, 2000)
+                            }, 1000)
                         })
                     })
                 }

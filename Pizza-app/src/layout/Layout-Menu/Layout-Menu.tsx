@@ -10,8 +10,9 @@ import {useEffect} from "react";
 export function Layout(){
     const navigate = useNavigate();
     const dispatch = useDispatch<AppDispatch>();
-    const profile = useSelector((s: RootState) => s.user.profile)
-    
+    const profile = useSelector((s: RootState) => s.user.profile);
+    const items = useSelector((s: RootState) => s.cart.items);
+
     
     const logout = () => {
         dispatch(userActions.logout());
@@ -28,7 +29,7 @@ export function Layout(){
                 <img src="/avatar.png" alt="avatar" className={styles['avatar']}/>
                 <div className={styles['name']}>{profile?.name}</div>
                 <div className={styles['email']}>{profile?.email}</div>
-            </div>
+            </div> 
             <div className={styles['menu']}>
                 <NavLink to={'/'} className={({ isActive }) => cn(styles['link'], {
                     [styles.active]: isActive
@@ -41,7 +42,9 @@ export function Layout(){
                 })}>
                     <i className="fas fa-shopping-cart"></i>
                     Cart
+                    <span className={styles['count']}>{items.reduce((acc, item) => acc += item.count, 0)}</span>
                 </NavLink>
+
             </div>
             <Button className={styles['exit-button']} onClick={logout}>
                 <i className="fal fa-times-circle"></i>
