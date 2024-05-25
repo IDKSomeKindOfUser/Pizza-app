@@ -7,13 +7,13 @@ import {AppDispatch, RootState} from "../../store/store.ts";
 import {getProfile, userActions} from "../../store/user.slice.ts";
 import {useEffect} from "react";
 
-export function Layout(){
+export function Layout() {
     const navigate = useNavigate();
     const dispatch = useDispatch<AppDispatch>();
     const profile = useSelector((s: RootState) => s.user.profile);
     const items = useSelector((s: RootState) => s.cart.items);
 
-    
+
     const logout = () => {
         dispatch(userActions.logout());
         navigate('/auth/login');
@@ -29,15 +29,15 @@ export function Layout(){
                 <img src="/avatar.png" alt="avatar" className={styles['avatar']}/>
                 <div className={styles['name']}>{profile?.name}</div>
                 <div className={styles['email']}>{profile?.email}</div>
-            </div> 
+            </div>
             <div className={styles['menu']}>
-                <NavLink to={'/'} className={({ isActive }) => cn(styles['link'], {
+                <NavLink to={'/'} className={({isActive}) => cn(styles['link'], {
                     [styles.active]: isActive
                 })}>
                     <i className="fas fa-ellipsis-h-alt"></i>
                     Menu
                 </NavLink>
-                <NavLink to={'/cart'} className={({ isActive }) => cn(styles['link'], {
+                <NavLink to={'/cart'} className={({isActive}) => cn(styles['link'], {
                     [styles.active]: isActive
                 })}>
                     <i className="fas fa-shopping-cart"></i>
@@ -52,7 +52,7 @@ export function Layout(){
             </Button>
         </div>
         <div className={styles['content']}>
-        <Outlet />
+            <Outlet/>
         </div>
     </div>
 }

@@ -9,18 +9,17 @@ import {cartActions} from "../../store/cart.slice.ts";
 import React from "react";
 
 
-
-function ProductCard(props: ProductCardProps){
+function ProductCard(props: ProductCardProps) {
 
     const dispatch = useDispatch<AppDispatch>();
 
-    const add = (e: React.MouseEvent<HTMLButtonElement>)=> {
+    const add = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         dispatch(cartActions.add(props.id));
     }
 
 
-    return(
+    return (
         <Link to={`/product/${props.id}`}>
             <div className={styles['card']}>
                 <div className={styles['header']} style={{backgroundImage: `url('${props.image}')`}}>
@@ -33,7 +32,7 @@ function ProductCard(props: ProductCardProps){
                     </button>
                     <div className={styles['rating']}>
                         {props.rating}&nbsp;
-                        <FontAwesomeIcon icon={faStar} style={{color: "#FFD43B",}} />
+                        <FontAwesomeIcon icon={faStar} style={{color: "#FFD43B",}}/>
                     </div>
                 </div>
                 <div className={styles['footer']}>

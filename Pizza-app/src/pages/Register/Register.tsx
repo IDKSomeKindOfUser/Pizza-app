@@ -9,7 +9,7 @@ import {register, userActions} from "../../store/user.slice.ts";
 import {useDispatch, useSelector} from "react-redux";
 
 export type RegisterForm = {
-    email:{
+    email: {
         value: string,
     },
     password: {
@@ -40,7 +40,7 @@ export function Register() {
         dispatch(register({email: email.value, password: password.value, name: name.value}))
     }
 
-    return <div className={styles['register-wrapper']} >
+    return <div className={styles['register-wrapper']}>
         <Title className={styles['title']}>Register</Title>
         {registerErrorMessage && <div className={styles['error']}>{registerErrorMessage}</div>}
         <form className={styles['form']} onSubmit={submit}>

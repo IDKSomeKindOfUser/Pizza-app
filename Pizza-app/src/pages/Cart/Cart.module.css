@@ -1,4 +1,4 @@
-.price-container{
+.price-container {
     display: flex;
     justify-content: space-between;
     padding: 17px 0;
@@ -6,27 +6,27 @@
 
 .price-container,
 .hr,
-.checkout{
+.checkout {
     max-width: 500px;
 }
 
 .hr,
 .total-count,
-.price-container span{
+.price-container span {
     color: var(--color-separator);
     font-weight: 300;
 }
 
 .text,
-.price{
+.price {
     font-weight: 500;
 }
 
-.price{
+.price {
     font-size: 19px;
 }
 
-.checkout{
+.checkout {
     display: flex;
     justify-content: center;
     align-items: center;

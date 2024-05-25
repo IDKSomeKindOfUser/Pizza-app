@@ -6,19 +6,22 @@
     border: none;
     color: var(--color-white);
 }
-.small{
+
+.small {
     padding: 10px 25px;
 }
 
-.big{
+.big {
     font-size: 15px;
     padding: 20px 60px;
     text-transform: uppercase;
     box-shadow: 0 10px 40px 0 rgba(122, 129, 190, 0.16);
 }
+
 .accent {
     background-color: var(--color-primary);
 }
+
 .accent:hover {
     background-color: var(--color-primary-hover);
 }

@@ -11,7 +11,7 @@ export const store = configureStore({
     }
 });
 
-store.subscribe(() =>{
+store.subscribe(() => {
     saveState({jwt: store.getState().user.jwt}, jwt_persistent_state);
     saveState(store.getState().cart, cart_persistent_state);
 })

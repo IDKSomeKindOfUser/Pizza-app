@@ -1,16 +1,16 @@
-.login-wrapper{
+.login-wrapper {
     width: 100%;
     max-width: 500px;
 }
 
 .login-wrapper,
-.form{
+.form {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.error{
+.error {
     background-color: var(--color-primary);
     color: var(--color-white);
     padding: 20px;
@@ -19,31 +19,36 @@
 }
 
 .field,
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.field:last-of-type{
+
+.field:last-of-type {
     margin-bottom: 70px;
 }
-.description{
+
+.description {
     font-size: 17px;
     color: var(--color-separator);
 }
-.button{
+
+.button {
     align-self: center;
 }
 
-.footer{
+.footer {
     align-items: center;
     justify-content: center;
     font-size: 14px;
     color: var(--color-text-secondary);
 }
+
 .footer a {
     color: var(--color-primary);
 }
-.footer a:hover{
+
+.footer a:hover {
     color: var(--color-primary-hover);
 }

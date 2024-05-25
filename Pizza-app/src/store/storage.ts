@@ -1,13 +1,11 @@
-
-
 export function loadState<T>(key: string): T | undefined {
-    try{
+    try {
         const jsonState = localStorage.getItem(key);
-        if(!jsonState){
+        if (!jsonState) {
             return undefined;
         }
         return JSON.parse(jsonState);
-    }catch(e){
+    } catch (e) {
         console.log(e);
         return undefined;
     }

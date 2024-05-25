@@ -1,53 +1,58 @@
-.card-wrapper{
+.card-wrapper {
     display: flex;
     flex-direction: column;
     gap: 100px;
 }
+
 .header,
-.card{
-    max-width:700px;
+.card {
+    max-width: 700px;
     display: flex;
     align-items: center;
     gap: 100px;
 }
-.arrow{
+
+.arrow {
     background-color: var(--color-primary);
     border-radius: 20px;
     color: var(--color-white);
     padding: 10px 25px;
     transition-duration: 0.2s;
 }
+
 .arrow:hover {
     background-color: var(--color-primary-hover);
 }
 
 
-.description{
+.description {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
 
-.wrapper{
+.wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
 }
-.image{
+
+.image {
     border-radius: 20px;
 }
 
 .hr,
-.currency{
+.currency {
     color: var(--color-separator);
 }
-.composition-wrapper{
+
+.composition-wrapper {
     color: var(--color-text-secondary);
 }
 
-.rating{
+.rating {
     padding: 3px 8px;
     background-color: var(--color-white);
     border-radius: 20px;
@@ -56,7 +61,7 @@
     font-size: 12px;
 }
 
-.add-to-cart-button{
+.add-to-cart-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,10 +69,10 @@
     margin-left: auto;
 }
 
-.ingredient-text{
+.ingredient-text {
     font-size: 15px;
 }
 
-.ingredient-text:first-letter{
+.ingredient-text:first-letter {
     text-transform: uppercase;
 }

@@ -7,7 +7,7 @@ import {ChangeEvent, useEffect, useState} from "react";
 import axios, {AxiosError} from "axios";
 import {MenuList} from "./MenuList/MenuList.tsx";
 
-export function Menu(){
+export function Menu() {
     const [products, setProducts] = useState<ProductType[]>([])
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | undefined>();
@@ -19,21 +19,20 @@ export function Menu(){
     }, [filter]);
 
 
-
     const getMenu = async (name?: string) => {
         // using library axios
-        try{
+        try {
             setIsLoading(true);
-            const { data } = await axios.get<ProductType[]>(`${prefix}/products`, {
+            const {data} = await axios.get<ProductType[]>(`${prefix}/products`, {
                 params: {
                     name
                 }
             });
             setProducts(data);
             setIsLoading(false);
-        }catch(e){
+        } catch (e) {
             console.error(e);
-            if (e instanceof AxiosError){
+            if (e instanceof AxiosError) {
                 setError(e.message)
             }
             setIsLoading(false);

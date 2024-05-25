@@ -9,7 +9,7 @@ import {login, userActions} from "../../store/user.slice.ts";
 import {useDispatch, useSelector} from "react-redux";
 
 export type LoginForm = {
-    email:{
+    email: {
         value: string,
     },
     password: {
@@ -18,13 +18,13 @@ export type LoginForm = {
 }
 
 
-export function Login(){
+export function Login() {
     const navigate = useNavigate();
     const dispatch = useDispatch<AppDispatch>()
     const {jwt, loginErrorMessage} = useSelector((s: RootState) => s.user);
 
     useEffect(() => {
-        if(jwt){
+        if (jwt) {
             navigate('/')
         }
     }, [jwt, navigate]);
@@ -33,15 +33,15 @@ export function Login(){
         e.preventDefault();
         dispatch(userActions.clearLoginError());
         const target = e.target as typeof e.target & LoginForm;
-        const { email, password } = target;
+        const {email, password} = target;
         await sendLogin(email.value, password.value)
     }
 
-    const sendLogin = async (email: string, password: string) =>{
+    const sendLogin = async (email: string, password: string) => {
         dispatch(login({email, password}))
     }
 
-    return <div className={styles['login-wrapper']} >
+    return <div className={styles['login-wrapper']}>
         <Title className={styles['title']}>Enter</Title>
         {loginErrorMessage && <div className={styles['error']}>{loginErrorMessage}</div>}
         <form className={styles['form']} onSubmit={submit}>

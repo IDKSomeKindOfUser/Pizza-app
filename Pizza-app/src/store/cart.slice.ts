@@ -10,7 +10,7 @@ export interface CartItems {
     count: number,
 }
 
-export interface CartState{
+export interface CartState {
     items: CartItems[];
 }
 
@@ -38,12 +38,12 @@ export const cartSlice = createSlice({
         },
         decrease: (state, action: PayloadAction<number>) => {
             const existed = state.items.find(i => i.id === action.payload);
-            if (!existed){
+            if (!existed) {
                 return;
             }
             if (existed.count === 1) {
                 state.items = state.items.filter(i => i.id !== action.payload);
-            }else {
+            } else {
                 state.items.map(i => {
                     if (i.id === action.payload) {
                         i.count -= 1;

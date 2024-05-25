@@ -1,51 +1,58 @@
-.layout{
+.layout {
     display: flex;
     min-height: 100vh;
 }
 
 /*Sidebar*/
 
-.sidebar{
+.sidebar {
     display: flex;
     flex-direction: column;
     padding: 30px;
     border-right: 1px solid var(--color-separator);
 }
 
-.user{
+.user {
     margin-bottom: 45px;
 }
-.name{
+
+.name {
     padding-top: 20px;
     font-size: 20px;
     font-weight: 700;
     color: var(--color-text);
 }
-.email{
+
+.email {
     font-size: 14px;
     color: #9EA1B1;
 }
-.avatar{
+
+.avatar {
     max-width: 100px;
 }
-.menu{
+
+.menu {
     display: flex;
     flex-direction: column;
     row-gap: 35px;
 }
-.link{
+
+.link {
     display: flex;
     align-items: center;
     gap: 15px;
     text-decoration: none;
     color: var(--color-text);
 }
+
 .link:hover,
-.active{
+.active {
     color: var(--color-primary-hover);
     transition-duration: 0.2s;
 }
-.exit-button{
+
+.exit-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +60,7 @@
     margin-top: auto;
 }
 
-.count{
+.count {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +73,7 @@
     color: var(--color-white);
 }
 
-.count:hover{
+.count:hover {
     background-color: var(--color-primary-hover);
     color: var(--color-separator);
     transition-duration: 0.2s;
@@ -75,7 +82,7 @@
 
 /*Content*/
 
-.content{
+.content {
     padding: 40px 60px;
     width: 100%;
 }

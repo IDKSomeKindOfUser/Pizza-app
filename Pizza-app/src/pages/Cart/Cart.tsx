@@ -13,7 +13,7 @@ import {cartActions} from "../../store/cart.slice.ts";
 
 const delivery_fee = 169;
 
-export function Cart(){
+export function Cart() {
     const [cartProducts, setCartProducts] = useState<ProductType[]>([])
     const items = useSelector((state: RootState) => state.cart.items);
     const jwt = useSelector((state: RootState) => state.user.jwt);
@@ -21,20 +21,20 @@ export function Cart(){
     const dispatch = useDispatch<AppDispatch>();
     const total_price = items.map(i => {
         const product = cartProducts.find(p => p.id === i.id);
-        if (!product){
+        if (!product) {
             return 0;
         }
         return i.count * product.price;
     }).reduce((acc, i) => acc += i, 0);
 
 
-    const getItem = async (id:number) => {
+    const getItem = async (id: number) => {
         const {data} = await axios.get<ProductType>(`${prefix}/products/${id}`);
         return data;
     }
 
     const loadAllItems = async () => {
-        const res = await Promise.all(items.map( item => getItem(item.id)));
+        const res = await Promise.all(items.map(item => getItem(item.id)));
         setCartProducts(res);
     }
 
@@ -59,7 +59,7 @@ export function Cart(){
         <Title style={{marginBlock: '40px'}}>Cart</Title>
         {items.map(i => {
             const product = cartProducts.find(p => p.id === i.id);
-            if (!product){
+            if (!product) {
                 return
             }
             return <CartItem key={product.id} count={i.count} {...product} />
@@ -68,7 +68,7 @@ export function Cart(){
             <div className={styles['text']}>Total</div>
             <div className={styles['price']}>{total_price}&nbsp;<span>₽</span></div>
         </div>
-        <hr className={styles['hr']} />
+        <hr className={styles['hr']}/>
         <div className={styles['price-container']}>
             <div className={styles['text']}>Delivery</div>
             <div className={styles['price']}>{delivery_fee}&nbsp;<span>₽</span></div>

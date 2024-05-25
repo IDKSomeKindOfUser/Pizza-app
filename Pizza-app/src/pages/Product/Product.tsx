@@ -8,25 +8,26 @@ import {useDispatch} from "react-redux";
 import {cartActions} from "../../store/cart.slice.ts";
 import {AppDispatch} from "../../store/store.ts";
 import {Suspense} from "react";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
+import {faArrowLeft} from "@fortawesome/free-solid-svg-icons/faArrowLeft";
 import Button from "../../components/Button/Button.tsx";
 
-export function Product(){
-    const data  = useLoaderData() as { data: ProductType };
+export function Product() {
+    const data = useLoaderData() as { data: ProductType };
     const dispatch = useDispatch<AppDispatch>();
 
     return <>
         <Suspense fallback={'Loading...'}>
             <Await resolve={data.data}>
-                {({data}: {data: ProductType}) => (
+                {({data}: { data: ProductType }) => (
                     <div className={styles['card-wrapper']}>
                         <div className={styles['header']}>
                             <Link to={'/'}>
                                 <FontAwesomeIcon icon={faArrowLeft} className={styles['arrow']}/>
                             </Link>
                             <Title>{data.name}</Title>
-                            <Button className={styles['add-to-cart-button']} appearance={'small'} onClick={() => dispatch(cartActions.add(data.id))}>
-                                <FontAwesomeIcon icon={faShoppingBag} style={{color: "#FFFFFF",}} />
+                            <Button className={styles['add-to-cart-button']} appearance={'small'}
+                                    onClick={() => dispatch(cartActions.add(data.id))}>
+                                <FontAwesomeIcon icon={faShoppingBag} style={{color: "#FFFFFF",}}/>
                                 <div className={styles['text']}>In the cart</div>
                             </Button>
                         </div>

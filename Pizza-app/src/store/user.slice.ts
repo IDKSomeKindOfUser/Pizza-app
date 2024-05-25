@@ -9,11 +9,11 @@ import {RootState} from "./store.ts";
 
 export const jwt_persistent_state = 'userData'
 
-export interface UserPersistentState{
+export interface UserPersistentState {
     jwt: string | null;
 }
 
-export interface UserState{
+export interface UserState {
     jwt: string | null;
     loginErrorMessage?: string;
     registerErrorMessage?: string;
@@ -25,54 +25,54 @@ export const initialState: UserState = {
 }
 
 export const login = createAsyncThunk('user/login',
-        async (params: { email: string, password: string }) => {
-            try {
-                const { data } = await axios.post<AuthResponse>(`${prefix}/auth/login`, {
-                    email: params.email,
-                    password: params.password,
-                });
-                return data;
-            }catch (e){
-                if (e instanceof AxiosError){
-                    throw new Error(e.response?.data.message);
-                }
+    async (params: { email: string, password: string }) => {
+        try {
+            const {data} = await axios.post<AuthResponse>(`${prefix}/auth/login`, {
+                email: params.email,
+                password: params.password,
+            });
+            return data;
+        } catch (e) {
+            if (e instanceof AxiosError) {
+                throw new Error(e.response?.data.message);
             }
         }
-    )
+    }
+)
 
 export const register = createAsyncThunk('user/register',
-        async (params: { email: string, password: string, name: string }) => {
-            try {
-                const { data } = await axios.post<AuthResponse>(`${prefix}/auth/register`, {
-                    email: params.email,
-                    password: params.password,
-                    name: params.name,
-                });
-                return data;
-            }catch (e){
-                if (e instanceof AxiosError){
-                    throw new Error(e.response?.data.message);
-                }
+    async (params: { email: string, password: string, name: string }) => {
+        try {
+            const {data} = await axios.post<AuthResponse>(`${prefix}/auth/register`, {
+                email: params.email,
+                password: params.password,
+                name: params.name,
+            });
+            return data;
+        } catch (e) {
+            if (e instanceof AxiosError) {
+                throw new Error(e.response?.data.message);
             }
         }
-    )
+    }
+)
 
 export const getProfile = createAsyncThunk<Profile, void, { state: RootState }>('user/getProfile',
-        async (_, thunkAPI) => {
-                const jwt = thunkAPI.getState().user.jwt
-                const { data } = await axios.get<Profile>(`${prefix}/user/profile`, {
-                    headers:{
-                        Authorization: `Bearer ${jwt}`
-                    }
-                });
-                return data;
+    async (_, thunkAPI) => {
+        const jwt = thunkAPI.getState().user.jwt
+        const {data} = await axios.get<Profile>(`${prefix}/user/profile`, {
+            headers: {
+                Authorization: `Bearer ${jwt}`
+            }
+        });
+        return data;
     }
 )
 
 export const userSlice = createSlice({
     name: "user",
     initialState,
-    reducers:{
+    reducers: {
         logout: (state) => {
             state.jwt = null;
         },
@@ -85,7 +85,7 @@ export const userSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(login.fulfilled, (state, action) => {
-            if (!action.payload){
+            if (!action.payload) {
                 return;
             }
             state.jwt = action.payload.access_token;
@@ -97,7 +97,7 @@ export const userSlice = createSlice({
             state.profile = action.payload;
         });
         builder.addCase(register.fulfilled, (state, action) => {
-            if (!action.payload){
+            if (!action.payload) {
                 return;
             }
             state.jwt = action.payload.access_token;
